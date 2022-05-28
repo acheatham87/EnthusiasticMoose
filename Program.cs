@@ -11,10 +11,24 @@ void Main()
     MooseSays("H I, I'M E N T H U S I A S T I C !");
     MooseSays("I really am enthusiastic");
 
+    QuestionGenerator("Do you have a dog?", "Really!?!? What's his name!?", "That's too bad, you should get one!");
     CanadaQuestion();
     EnthusiasticQuestion();
     LovesCSharpQuestion();
     SecretQuestion();
+}
+
+void QuestionGenerator (string query, string trueResponse, string falseResponse)
+{
+    bool isTrue = MooseAsks(query);
+    if(isTrue)
+    {
+        MooseSays(trueResponse);
+    }
+    else
+    {
+        MooseSays(falseResponse);
+    }
 }
 
 void CanadaQuestion()
